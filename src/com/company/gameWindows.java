@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class gameWindows extends JFrame{
+
+    public JButton monBoutonFuséee;
+
+
     public gameWindows(String name, int width, int height) {
         super(name);
         setSize(width, height);
@@ -11,17 +15,18 @@ public class gameWindows extends JFrame{
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JLabel monEtiquette = new JLabel("Voici 1 JLabel");
+        JLabel monEtiquette = new JLabel("Crazy Rocket");
         monEtiquette.setLayout(null);
-        monEtiquette.setSize(100,100); monEtiquette.setLocation(400,500);
-        monEtiquette.setForeground(Color.green);
+        monEtiquette.setSize(300,300);
+        monEtiquette.setLocation(700,100);
+        monEtiquette.setForeground(Color.red);
         monEtiquette.setLayout(null);
 
-        JButton monBouton = new JButton("Voici 1 JButton");
-        monBouton.setLayout(null);
-        monBouton.setBounds(100,100,100,100);
-        monBouton.setForeground(Color.green);
-        monBouton.setBackground(Color.white);
+        monBoutonFuséee  = new JButton("Jouer avec une fusée");
+        monBoutonFuséee.setLayout(null);
+        monBoutonFuséee.setBounds(100,100,100,100);
+        monBoutonFuséee.setForeground(Color.green);
+        monBoutonFuséee.setBackground(Color.white);
 
         JTextField monChampsTexte = new JTextField("A éditer");
         monChampsTexte.setLayout(null);
@@ -32,7 +37,7 @@ public class gameWindows extends JFrame{
 
         JPanel monConteneur = new JPanel();
         monConteneur.setLayout(null);
-        monConteneur.add(monBouton);
+        monConteneur.add(monBoutonFuséee);
         monConteneur.add(monEtiquette);
         monConteneur.add(monChampsTexte);
         monConteneur.setBounds(10,10,getWidth(),getHeight());
